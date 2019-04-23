@@ -29,8 +29,9 @@ namespace TollBooth
             // process (save to database, move to manual checkup queue, etc.)
             if (data.LicensePlateFound)
             {
-                // TODO 3: Modify send method to include the proper eventType name value for saving plate data.
+                // TODO 3: Modify send method  to include the proper eventType name value for saving plate data.
                 // COMPLETE: await Send(...);
+                // await Send("savePlateData", "TollBooth/CustomerService", data);
                 await Send("savePlateData", "TollBooth/CustomerService", data);
             }
             else
