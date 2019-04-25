@@ -42,6 +42,7 @@ namespace TollBooth
         {
             var licensePlateText = string.Empty;
             // Reuse the HttpClient across calls as much as possible so as not to exhaust all available sockets on the server on which it runs.
+           // _client = _client ?? new HttpClient();
             _client = _client ?? new HttpClient();
 
             try
@@ -79,7 +80,7 @@ namespace TollBooth
                 throw;
             }
 
-            log.LogInformation($"Finished processing data. Detected the following license plate: {licensePlateText}");
+            log.LogInformation($"Finisheddd processing data. Detected the following license plate: {licensePlateText}");
         }
     }
 }
